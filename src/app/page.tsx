@@ -583,31 +583,61 @@ export default function Home() {
                   {...cardHover}
                   className="group rounded-[1.8rem] border border-[#24324A] bg-[#0D1628] p-5 cursor-default hover:border-blue-500/35 hover:shadow-[0_30px_80px_rgba(37,99,235,0.08)] transition-colors duration-300"
                 >
-                  <div className="mb-4 h-44 rounded-[1.2rem] border border-[#24324A] bg-[linear-gradient(135deg,rgba(37,99,235,0.15),rgba(249,115,22,0.06),rgba(5,11,24,0.8))] p-4">
-                    <div className="flex h-full items-end justify-between rounded-[0.9rem] border border-white/5 bg-[#050B18]/50 p-4">
-                      <span className="text-sm uppercase tracking-[0.15em] text-slate-400">
-                        0{index + 1}
-                      </span>
-                      {project.category && (
-                        <span className="rounded-full bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 text-[10px] uppercase tracking-wider text-blue-300">
-                          {project.category}
+                  {/* Thumbnail — image if available, gradient fallback otherwise */}
+                  <div className="mb-4 h-44 overflow-hidden rounded-[1.2rem] border border-[#24324A]">
+                    {"imagePath" in project && project.imagePath ? (
+                      <img
+                        src={project.imagePath as string}
+                        alt={project.title}
+                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="flex h-full items-end justify-between rounded-[0.9rem] bg-[linear-gradient(135deg,rgba(37,99,235,0.15),rgba(249,115,22,0.06),rgba(5,11,24,0.8))] p-4">
+                        <span className="text-sm uppercase tracking-[0.15em] text-slate-400">
+                          0{index + 1}
                         </span>
-                      )}
-                    </div>
+                        {project.category && (
+                          <span className="rounded-full bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 text-[10px] uppercase tracking-wider text-blue-300">
+                            {project.category}
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </div>
+
+                  {/* Category badge (shown above title when image is present) */}
+                  {"imagePath" in project && project.imagePath && project.category && (
+                    <span className="mb-2 inline-block rounded-full bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 text-[10px] uppercase tracking-wider text-blue-300">
+                      {project.category}
+                    </span>
+                  )}
 
                   <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-slate-300">{project.problem}</p>
 
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {project.tools.map((tool) => (
-                      <span
-                        key={tool}
-                        className="rounded-full border border-[#24324A] bg-[#050B18]/60 px-2.5 py-1 text-[10px] uppercase tracking-[0.12em] text-slate-400"
+                  <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex flex-wrap gap-2">
+                      {project.tools.map((tool) => (
+                        <span
+                          key={tool}
+                          className="rounded-full border border-[#24324A] bg-[#050B18]/60 px-2.5 py-1 text-[10px] uppercase tracking-[0.12em] text-slate-400"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                    {"liveUrl" in project && project.liveUrl && (
+                      <a
+                        href={project.liveUrl as string}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1.5 text-[11px] font-medium text-orange-300 transition-colors duration-200 hover:border-orange-400/60 hover:bg-orange-500/20"
+                        onClick={(e) => e.stopPropagation()}
                       >
-                        {tool}
-                      </span>
-                    ))}
+                        Live Site
+                        <ArrowRight className="h-3 w-3" />
+                      </a>
+                    )}
                   </div>
                 </motion.article>
               ))}

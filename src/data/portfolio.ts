@@ -150,6 +150,17 @@ export const portfolioData = {
   ],
   projects: [
     {
+      title: "PrimeFit Coaching — Fitness Consultation Funnel",
+      category: "Sales Funnel",
+      problem: "Fitness coaches struggle to convert website visitors into booked consultations without a clear, guided customer journey.",
+      solution: "A full sales funnel built for PrimeFit Coaching — guiding cold visitors from a landing page through lead capture, trust-building, and a free consultation booking.",
+      workflow: ["Landing Page", "Lead Capture", "Trust & Social Proof", "Booking Page", "Confirmation"],
+      tools: ["HTML5", "CSS3", "JavaScript", "Vercel"],
+      result: "A live, conversion-focused fitness funnel that qualifies leads and books free consultations.",
+      liveUrl: "https://prime-fit-coaching.vercel.app/",
+      imagePath: "/images/projects/page.png",
+    },
+    {
       title: "Lead Generation & Follow-Up Funnel",
       category: "Lead Generation",
       problem: "Manual lead capture and follow-up slows down sales responsiveness.",
