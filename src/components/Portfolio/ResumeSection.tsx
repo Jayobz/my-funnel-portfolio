@@ -20,6 +20,7 @@ export function ResumeSection() {
           </h2>
         </motion.div>
 
+        {/* Action buttons */}
         <div className="grid gap-6 sm:grid-cols-2">
           {/* Download */}
           <motion.a
@@ -73,6 +74,34 @@ export function ResumeSection() {
           </motion.a>
         </div>
 
+        {/* Embedded PDF preview */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-8 overflow-hidden rounded-2xl border border-[#24324A] bg-[#0D1628]"
+        >
+          <div className="flex items-center justify-between border-b border-[#24324A] px-5 py-3">
+            <div className="flex items-center gap-2">
+              <FileText className="h-4 w-4 text-blue-400" />
+              <span className="text-xs font-medium text-slate-400">Obedencio-Jay-Web-Developer-Resume.pdf</span>
+            </div>
+            <a
+              href="/Obedencio-Jay-Web-Developer-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs text-orange-400 hover:text-orange-300 transition-colors"
+            >
+              Open <ExternalLink className="h-3 w-3" />
+            </a>
+          </div>
+          <iframe
+            src="/Obedencio-Jay-Web-Developer-Resume.pdf"
+            className="h-[780px] w-full"
+            title="Jay Obedencio Resume"
+          />
+        </motion.div>
 
       </div>
     </section>
