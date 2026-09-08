@@ -174,7 +174,7 @@ export const portfolioData = {
 
   ],
   contact: {
-    email: "your-email@example.com",
+    email: "jayobedencio03@gmail.com",
     linkedin: "LinkedIn",
     github: "GitHub",
     facebook: "Facebook",
