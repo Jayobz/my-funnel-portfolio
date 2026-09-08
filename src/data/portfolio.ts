@@ -179,7 +179,7 @@ export const portfolioData = {
     github: "GitHub",
     facebook: "Facebook",
   },
-  resume: { pdf: "/resume-placeholder.pdf" },
+  resume: { pdf: "/Obedencio-Jay-Web-Developer-Resume.pdf" },
 
   /**
    * Design / creative projects — separate from AI automation projects.

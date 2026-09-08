@@ -23,8 +23,8 @@ export function ResumeSection() {
         <div className="grid gap-6 sm:grid-cols-2">
           {/* Download */}
           <motion.a
-            href="/resume.pdf"
-            download="Jay_Obedencio_Resume.pdf"
+            href="/Obedencio-Jay-Web-Developer-Resume.pdf"
+            download="Obedencio-Jay-Web-Developer-Resume.pdf"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -48,7 +48,7 @@ export function ResumeSection() {
 
           {/* View */}
           <motion.a
-            href="/resume.pdf"
+            href="/Obedencio-Jay-Web-Developer-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -73,23 +73,7 @@ export function ResumeSection() {
           </motion.a>
         </div>
 
-        {/* Note card — blue tint */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-8 rounded-2xl border border-blue-500/20 bg-blue-500/5 p-6"
-        >
-          <p className="text-sm text-slate-300">
-            <span className="font-semibold text-blue-300">Note: </span>
-            The resume PDF is currently a placeholder. Once you complete your actual resume, simply replace the file at{" "}
-            <span className="font-mono text-xs bg-[#050B18]/60 border border-[#24324A] px-2 py-1 rounded text-slate-400">
-              /public/resume.pdf
-            </span>{" "}
-            and it will automatically be served here.
-          </p>
-        </motion.div>
+
       </div>
     </section>
   );
