@@ -161,6 +161,17 @@ export const portfolioData = {
       imagePath: "/images/projects/page.png",
     },
     {
+      title: "PrimeHome Realty — Real Estate Lead Funnel",
+      category: "Sales Funnel",
+      problem: "Home buyers feel overwhelmed searching listings without knowing what type of home actually fits their lifestyle and budget.",
+      solution: "A real estate funnel that guides prospects through 5 lifestyle questions, builds clarity around their needs, and moves them toward a free consultation with an advisor.",
+      workflow: ["Landing Page", "Lifestyle Quiz", "Budget Qualifier", "Free Guide", "Consultation Booking"],
+      tools: ["HTML5", "CSS3", "JavaScript", "Vercel"],
+      result: "A conversion-focused real estate funnel that qualifies buyers and books consultations.",
+      liveUrl: "https://real-state-hazel-nu.vercel.app/",
+      imagePath: "/images/projects/real state.png",
+    },
+    {
       title: "Lead Generation & Follow-Up Funnel",
       category: "Lead Generation",
       problem: "Manual lead capture and follow-up slows down sales responsiveness.",
