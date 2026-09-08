@@ -202,7 +202,12 @@ export function ContactSection() {
         >
           <div className="rounded-2xl border border-[#24324A] bg-[#0D1628] p-6">
             <p className="mb-2 text-sm text-slate-500">Email</p>
-            <p className="font-semibold text-white">{portfolioData.contact.email}</p>
+            <a
+              href={`mailto:${portfolioData.contact.email}`}
+              className="font-semibold text-white hover:text-orange-400 transition-colors duration-200"
+            >
+              {portfolioData.contact.email}
+            </a>
           </div>
           <div className="rounded-2xl border border-[#24324A] bg-[#0D1628] p-6">
             <p className="mb-2 text-sm text-slate-500">Location</p>
