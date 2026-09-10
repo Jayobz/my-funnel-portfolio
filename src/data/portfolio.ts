@@ -296,6 +296,103 @@ export const portfolioData = {
       tools: ["Canva", "Adobe Photoshop"],
     },
 
+    // ── Bulaklaya Mjass — Logo Design ─────────────────────────────────────
+    {
+      id: "bulaklaya-mjass-logo",
+      title: "Bulaklaya Mjass",
+      category: "Logo Design / Branding",
+      projectType: "logo" as const,
+      tags: ["Logo Design", "Branding", "Graphic Design", "Typography", "Floral Design", "Visual Identity"],
+      description:
+        "A custom logo design created for Jazel Jane Vega, combining elegant floral elements with a handwritten visual style to create a distinctive and personal identity.",
+      imagePath: "/images/projects/msjass.png" as string | null,
+
+      // ── Client details ───────────────────────────────────────────────────
+      event: {
+        name: "Bulaklaya Mjass",
+        theme: "Logo Design",
+        verse: "",
+        date: "",
+        time: "",
+        perks: "",
+        speaker: "",
+        location: "",
+        contact: "",
+        facebook: "",
+        church: "",
+      },
+
+      client: "Jazel Jane Vega",
+      serviceType: "Logo Design",
+      deliverable: "Custom Logo",
+
+      overview:
+        "This project involved creating a custom visual identity for Jazel Jane Vega. The design combines botanical line-art elements, a circular composition, and handwritten typography to create an elegant and artistic logo.",
+
+      objective: [
+        "Create a distinctive and personal visual identity for the client.",
+        "Combine floral botanical elements with elegant typography.",
+        "Design a circular composition that conveys balance and cohesion.",
+        "Produce a versatile logo that works across different use cases.",
+        "Reflect the client's personality through a handcrafted, artistic style.",
+      ],
+
+      designConcept: [
+        {
+          element: "Floral Elements",
+          meaning:
+            "Botanical illustrations add an elegant, natural, and artistic character to the identity.",
+        },
+        {
+          element: "Circular Composition",
+          meaning:
+            "The circular frame creates balance and gives the logo a cohesive visual structure.",
+        },
+        {
+          element: "Handwritten Typography",
+          meaning:
+            "The script typography gives the identity a personal, creative, and handcrafted feel.",
+        },
+        {
+          element: "Minimal Color Palette",
+          meaning:
+            "The monochromatic treatment keeps the logo clean and versatile while allowing the typography to remain the focal point.",
+        },
+      ],
+
+      process: [
+        "Concept",
+        "Direction",
+        "Design",
+        "Refine",
+        "Finalize",
+      ],
+
+      role: {
+        title: "Graphic Designer",
+        responsibilities: [
+          "Logo concept development",
+          "Floral illustration",
+          "Typography selection",
+          "Circular composition",
+          "Color palette selection",
+          "Final logo preparation",
+        ],
+      },
+
+      skills: [
+        "Logo Design",
+        "Branding",
+        "Graphic Design",
+        "Typography",
+        "Layout Design",
+        "Visual Identity",
+        "Illustration",
+      ],
+
+      tools: ["Canva", "Adobe Photoshop"],
+    },
+
     // ── Rooted & Built Up — Family Day Poster ──────────────────────────────
     {
       id: "rooted-family-day",

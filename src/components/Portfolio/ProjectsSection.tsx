@@ -17,12 +17,28 @@ const AI_ICONS: Record<string, React.ReactNode> = {
 };
 
 // ── Design card thumbnail ─────────────────────────────────────────────────────
+function isLogoProject(project: (typeof portfolioData.designProjects)[number]): boolean {
+  return "projectType" in project && (project as { projectType?: string }).projectType === "logo";
+}
+
 function DesignCardVisual({
   project,
 }: {
   project: (typeof portfolioData.designProjects)[number];
 }) {
   if (project.imagePath) {
+    if (isLogoProject(project)) {
+      return (
+        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#f8f6f2] to-[#ede9e0] p-6">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={project.imagePath}
+            alt={project.title}
+            className="max-h-full w-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.15)]"
+          />
+        </div>
+      );
+    }
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
